@@ -418,7 +418,7 @@ function render(){
   var c2=document.getElementById("chips2");c2.innerHTML="";SCH2.forEach(function(c){var e=document.createElement("span");e.textContent=c[i];c2.appendChild(e)});
   var cp=document.querySelectorAll(".vcap");for(var q=0;q<cp.length;q++)cp[q].textContent=VS[q][i];
   document.getElementById("vprev").setAttribute("aria-label",lang==="fr"?"Précédent":"Previous");document.getElementById("vnext").setAttribute("aria-label",lang==="fr"?"Suivant":"Next");
-  document.title=lang==="fr"?"Servino – Études à l'étranger":"Servino – Study abroad";
+  document.title="Servino Agency";
 }
 function setLang(l){
   lang=l;
