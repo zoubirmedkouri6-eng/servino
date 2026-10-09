@@ -140,6 +140,13 @@ footer .copy{border-top:1px solid var(--line);padding-top:18px;font-size:.82rem}
 .vdots button{width:10px;height:10px;padding:0;border-radius:50%;border:0;background:var(--line);cursor:pointer}
 .vdots button[aria-current="true"]{background:var(--gold);width:26px;border-radius:999px}
 @media(prefers-reduced-motion:reduce){.vtrack{transition:none}}
+.mapgrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:center}
+.maptxt p{margin:0 0 6px}
+.maptxt .coords{color:var(--mute);font-size:.9rem}
+.maptxt .btns{margin-top:18px}
+.mapcard{display:block;border-radius:6px;overflow:hidden;border-bottom:4px solid var(--gold);box-shadow:0 6px 24px rgba(154,106,0,.18)}
+.mapcard svg{display:block;width:100%;height:auto}
+@media(max-width:800px){.mapgrid{grid-template-columns:1fr;gap:24px}}
 </style>
 </head>
 <body>
@@ -247,10 +254,24 @@ footer .copy{border-top:1px solid var(--line);padding-top:18px;font-size:.82rem}
   <p data-i18n="askp"></p>
   <a class="btn" href="https://wa.me/212608080190" target="_blank" rel="noopener" data-i18n="askb"></a>
 </div></div>
+<section id="map"><div class="wrap mapgrid">
+  <div class="maptxt">
+    <h2 data-i18n="mapt"></h2>
+    <p><b>Servino Visa</b></p>
+    <p>Av. Al Wafaa, Fès, Maroc</p>
+    <p class="coords">34.0127769, -4.9722147</p>
+    <div class="btns">
+      <a class="btn gold" href="https://www.google.com/maps/place/SERVINO+VISA/@34.0127769,-4.9722147,17z/data=!3m1!4b1!4m6!3m5!1s0xd9f8f3336f5d4f7:0xeacd9525c558ddc5!8m2!3d34.0127769!4d-4.9722147!16s%2Fg%2F11nr5lfnj7" target="_blank" rel="noopener" data-i18n="mapb"></a>
+      <a class="btn line" href="https://www.google.com/maps/dir/?api=1&destination=34.0127769,-4.9722147" target="_blank" rel="noopener" data-i18n="mapd"></a>
+    </div>
+  </div>
+  <a class="mapcard" href="https://www.google.com/maps/place/SERVINO+VISA/@34.0127769,-4.9722147,17z/data=!3m1!4b1!4m6!3m5!1s0xd9f8f3336f5d4f7:0xeacd9525c558ddc5!8m2!3d34.0127769!4d-4.9722147!16s%2Fg%2F11nr5lfnj7" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 400 260" aria-hidden="true"><rect width="400" height="260" fill="#f3ecd6"/><rect x="250" y="20" width="120" height="70" rx="6" fill="#dbe8c6"/><g fill="#e9dfc0"><rect x="20" y="20" width="60" height="45" rx="4"/><rect x="105" y="25" width="80" height="85" rx="4"/><rect x="215" y="150" width="80" height="50" rx="4"/><rect x="325" y="150" width="55" height="45" rx="4"/><rect x="20" y="150" width="60" height="50" rx="4"/><rect x="105" y="150" width="85" height="45" rx="4"/></g><g stroke="#fff" stroke-linecap="round" fill="none"><path d="M0 130H400" stroke-width="16"/><path d="M200 0V260" stroke-width="12"/><path d="M0 40L400 210" stroke-width="8"/><path d="M90 0V260" stroke-width="7"/><path d="M310 0V260" stroke-width="7"/><path d="M0 225H400" stroke-width="6"/></g><text x="28" y="134" font-size="10" font-weight="700" fill="#8a7a50" font-family="Arial,sans-serif">Av. Al Wafaa</text><g transform="translate(200 130)"><ellipse cx="0" cy="2" rx="10" ry="4" fill="rgba(0,0,0,.22)"/><path d="M0 0C-3-10-18-22-18-38a18 18 0 0 1 36 0C18-22 3-10 0 0z" fill="#f0b429" stroke="#1f1d19" stroke-width="2"/><circle cx="0" cy="-38" r="7" fill="#fffdf8"/></g></svg></a>
+</div></section>
 </main>
 <footer><div class="wrap">
   <div class="fcols">
     <div><h4>WhatsApp</h4><p><a href="https://wa.me/212608080190" target="_blank" rel="noopener">06 08 08 01 90</a></p></div>
+    <div><h4>Email</h4><p><a href="mailto:contact@servino.com">contact@servino.com</a></p></div>
     <div><h4>Instagram</h4><p><a href="https://www.instagram.com/servino.agency" target="_blank" rel="noopener">@servino.agency</a></p></div>
     <div><h4 data-i18n="addr"></h4><p>Av. Al Wafaa, Fès, Maroc</p></div>
   </div>
@@ -258,7 +279,7 @@ footer .copy{border-top:1px solid var(--line);padding-top:18px;font-size:.82rem}
 </div></footer>
 <script>
 var T={
-fr:{housing:"Logement",exc:"Bourses d'excellence",after:"Après les études",progs:"Les 3 programmes",sch:"Bourses",serv:"Nos services",paths:"Les deux voies d'études",vst:"Visas accordés",vsl:"Quelques-uns des visas obtenus avec Servino.",nav5:"Visa touristique",sct:"Visa touristique",sci:"Servino vous accompagne aussi pour votre visa touristique, en Europe comme en Amérique du Nord.",scx:"Destinations en Europe",scx2:"Amérique du Nord",scn:"Contactez-nous pour savoir quel pays correspond à votre projet.",nav0:"Immigration Canada",cat:"Immigration au Canada",cai:"Servino accompagne les candidats à l'immigration au Canada à chaque étape, de la préparation du profil jusqu'au dépôt du dossier de visa.",cah:"Notre accompagnement pour immigrer au Canada",cb2:"Explorer nos pays d'études",
+fr:{mapt:"Où nous trouver",mapb:"Ouvrir dans Google Maps",mapd:"Itinéraire",housing:"Logement",exc:"Bourses d'excellence",after:"Après les études",progs:"Les 3 programmes",sch:"Bourses",serv:"Nos services",paths:"Les deux voies d'études",vst:"Visas accordés",vsl:"Quelques-uns des visas obtenus avec Servino.",nav5:"Visa touristique",sct:"Visa touristique",sci:"Servino vous accompagne aussi pour votre visa touristique, en Europe comme en Amérique du Nord.",scx:"Destinations en Europe",scx2:"Amérique du Nord",scn:"Contactez-nous pour savoir quel pays correspond à votre projet.",nav0:"Immigration Canada",cat:"Immigration au Canada",cai:"Servino accompagne les candidats à l'immigration au Canada à chaque étape, de la préparation du profil jusqu'au dépôt du dossier de visa.",cah:"Notre accompagnement pour immigrer au Canada",cb2:"Explorer nos pays d'études",
 ca1t:"Préparation du profil",ca1a:"CV canadien adapté aux standards du marché de l'emploi canadien",ca1b:"Lettre de motivation",
 ca2t:"Préparation à l'entretien",ca2a:"Préparation à l'entretien avec les entreprises canadiennes",ca2b:"Conseils pour réussir l'entretien d'immigration",
 ca3t:"Dossier de visa",ca3a:"Aide à la préparation du dossier de visa et explication des conditions à respecter",ca3c:"Procédure à suivre si vous avez besoin de traductions ou de l'équivalence de votre diplôme",
@@ -283,7 +304,7 @@ s4t:"Entretien et décision",s4p:"Préparation à l'entretien, puis suivi de vot
 h2c:"Parlons de votre projet",leadc:"Écrivez-nous sur WhatsApp ou prenez rendez-vous à l'agence.",addr:"Adresse",
 cost:"Frais de scolarité",living:"Coût de la vie",adm:"Admission",intake:"Rentrée",visa:"Visa",work:"Travail pendant les études",extra:"À savoir",
 more:"Parler à un conseiller"},
-en:{housing:"Housing",exc:"Excellence scholarships",after:"After your studies",progs:"The 3 programmes",sch:"Scholarships",serv:"Our services",paths:"The two study paths",vst:"Accepted visas",vsl:"A few of the visas obtained with Servino.",nav5:"Tourist visa",sct:"Tourist visa",sci:"Servino also helps you with your tourist visa, in Europe and in North America.",scx:"Destinations in Europe",scx2:"North America",scn:"Contact us to find out which country fits your plan.",nav0:"Canada immigration",cat:"Immigration to Canada",cai:"Servino supports candidates immigrating to Canada at every step, from preparing your profile to submitting your visa file.",cah:"How we support your move to Canada",cb2:"Study abroad",
+en:{mapt:"Find us",mapb:"Open in Google Maps",mapd:"Get directions",housing:"Housing",exc:"Excellence scholarships",after:"After your studies",progs:"The 3 programmes",sch:"Scholarships",serv:"Our services",paths:"The two study paths",vst:"Accepted visas",vsl:"A few of the visas obtained with Servino.",nav5:"Tourist visa",sct:"Tourist visa",sci:"Servino also helps you with your tourist visa, in Europe and in North America.",scx:"Destinations in Europe",scx2:"North America",scn:"Contact us to find out which country fits your plan.",nav0:"Canada immigration",cat:"Immigration to Canada",cai:"Servino supports candidates immigrating to Canada at every step, from preparing your profile to submitting your visa file.",cah:"How we support your move to Canada",cb2:"Study abroad",
 ca1t:"Profile preparation",ca1a:"Canadian-style CV adapted to the standards of the Canadian job market",ca1b:"Cover letter",
 ca2t:"Interview preparation",ca2a:"Preparation for interviews with Canadian companies",ca2b:"Tips to succeed in the immigration interview",
 ca3t:"Visa file",ca3a:"Help preparing your visa file and explanation of the conditions to meet",ca3c:"Procedure to follow if you need translations or the equivalence of your diploma",
@@ -427,24 +448,3 @@ function setLang(l){
 }
 document.getElementById("bFr").onclick=function(){setLang("fr")};
 document.getElementById("bEn").onclick=function(){setLang("en")};
-try{var s=localStorage.getItem("servino-lang");if(s==="en"||s==="fr")lang=s}catch(e){}
-render();
-var hd=document.querySelector("header");function st(){hd.classList.toggle("stuck",window.scrollY>40)}
-window.addEventListener("scroll",st,{passive:true});st();
-var vi=0,vt=null,vn=7,vx=0;
-function vgo(k){vi=(k+vn)%vn;document.getElementById("vtrack").style.transform="translateX(-"+(vi*100)+"%)";var d=document.querySelectorAll("#vdots button");for(var j=0;j<d.length;j++)d[j].setAttribute("aria-current",j===vi?"true":"false")}
-function vstop(){if(vt){clearInterval(vt);vt=null}}
-function vplay(){vstop();if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;vt=setInterval(function(){vgo(vi+1)},3500)}
-(function(){
-  var dots=document.getElementById("vdots"),sl=document.getElementById("vslider");
-  for(var k=0;k<vn;k++){(function(k){var b=document.createElement("button");b.type="button";b.setAttribute("aria-label",""+(k+1));b.onclick=function(){vgo(k);vplay()};dots.appendChild(b)})(k)}
-  document.getElementById("vprev").onclick=function(){vgo(vi-1);vplay()};
-  document.getElementById("vnext").onclick=function(){vgo(vi+1);vplay()};
-  sl.addEventListener("mouseenter",vstop);sl.addEventListener("mouseleave",vplay);
-  sl.addEventListener("touchstart",function(e){vx=e.touches[0].clientX;vstop()},{passive:true});
-  sl.addEventListener("touchend",function(e){var dx=e.changedTouches[0].clientX-vx;if(Math.abs(dx)>40)vgo(dx<0?vi+1:vi-1);vplay()},{passive:true});
-  vgo(0);vplay();
-})();
-</script>
-</body>
-</html>
